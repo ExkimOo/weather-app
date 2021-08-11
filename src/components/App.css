@@ -11,17 +11,17 @@ body {
 }
 
 .left-panel {
-  margin: 0;
+  margin: 0 auto;
   width: 500px;
   background-color: white;
   height: 100vh;
   align-items: center;
 }
 
-.right-panel {
-  background-color: #F1F1F1;
-  width: calc(100% - 500px);
-  height: 100vh;
+.left-panel__container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 420px;
 }
 
 .left-panel__header {
@@ -39,8 +39,6 @@ body {
   /* background-image: url(../media/search.png); */
   background-size: 20px;
   font-size: 20px;
-  /* background-position: 17px 11px;
-  background-repeat: no-repeat; */
 
   background: #DCDCDC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -53,16 +51,147 @@ body {
   height: 42px;
   margin-left: 40px;
 
-  /* left: 363px;
-  top: 48px; */
-
   background: #DCDCDC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
 
 .left-panel__image {
-  width: 253px;
-  height: 253px;
-  margin-top: 40px;
+  width: 255px;
+  height: 255px;
+  margin-top: 150px;
+  margin-left: 80px;
+}
+
+.left-panel-text {
+  font-family: Montserrat;
+  font-size: 36px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.left-panel-text__temperature {
+  margin-top: 55px;
+
+  font-weight: 300;
+  font-size: 96px;
+}
+
+.left-panel-text__location {
+  margin-top: 20px;
+
+  font-weight: 600;
+}
+
+.left-panel-text__day {
+  margin-top: 10px;
+
+  font-weight: 300;
+}
+
+.left-panel-text__time {
+  margin-top: 10px; 
+}
+
+.right-panel {
+  background-color: #F1F1F1;
+  width: calc(100% - 500px);
+  height: 100vh;
+}
+
+.right-panel__container {
+  /* width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; */
+
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.right-panel-text__wrapper {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.interval_text {
+  margin: 0 5px;
+  color: #BCBCBC;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.interval_text:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 45%);
+}
+
+.interval_text.active {
+  /* cursor: default; */
+  color: black;
+}
+
+.right-panel-ellipse__wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.ellipse__text {
+  background-color: white;
+  color: black;
+
+  border-radius: 50%;
+  margin: 0 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 7px;
+
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.ellipse__text.active {
+  background-color: black;
+  color: white;
+}
+
+.ellipse__text:hover {
+  cursor: pointer;
+}
+
+.right-panel-card__wrapper {
+  margin-top: 20px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.right-panel-card {
+  display: block;
+  width: 112px;
+  height: 153px;
+  border-radius: 30px;
+  background: #FFFFFF;
+}
+
+.right-panel-card__time {
+  padding-top: 13px;
+  text-align: center;
+}
+
+.right-panel-card__picture {
+  text-align: center;
+}
+
+.right-panel-card__temperature {
+  padding-top: 13px;
+  text-align: center;
 }

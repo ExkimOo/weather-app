@@ -5,7 +5,7 @@ export const SearchBar = () => {
         <div>
             <input 
             className="search_bar"
-            placeholder="type your city..." />
+            placeholder="type location..." />
         </div>
     )
 }
