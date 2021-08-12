@@ -8,10 +8,10 @@ export const WeatherCard = ({time, picture, temperature}) => {
                 {time}
             </div>
             <div className="right-panel-card__picture">
-                {picture}
+                <img className="right-panel-card__image" src={picture}></img>
             </div>
             <div className="right-panel-card__temperature">
-                {temperature}
+                {temperature + "°"}
             </div>
         </div>
     )

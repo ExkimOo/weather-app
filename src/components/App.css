@@ -175,7 +175,12 @@ body {
 }
 
 .right-panel-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 8px 0;
+
   width: 112px;
   height: 153px;
   border-radius: 30px;
@@ -183,8 +188,11 @@ body {
 }
 
 .right-panel-card__time {
-  padding-top: 13px;
   text-align: center;
+
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .right-panel-card__picture {
@@ -192,6 +200,72 @@ body {
 }
 
 .right-panel-card__temperature {
-  padding-top: 13px;
   text-align: center;
+
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.right-panel-card__image {
+  width: 57px;
+  height: 57px;
+}
+
+.highlights__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+
+  text-align: center;
+  margin-top: 78px;
+}
+
+.highlights__main {
+  margin-top: 78px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.highlights__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hightlights__row {
+  display: flex;
+}
+
+.highlights__component {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  text-align: center;
+  margin-left: 26px;
+
+  width: 240px;
+  height: 186px;
+
+  background: #FFFFFF;
+  border-radius: 30px;
+}
+
+.highlights__component:first-child {
+  margin-left: 0;
+}
+
+.highlights__component-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.highlights__map {
+  width: 400px;
+  height: 400px;
+
+  background: #FFFFFF;
+  border-radius: 30px;
 }

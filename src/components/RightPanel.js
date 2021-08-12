@@ -1,6 +1,13 @@
 import React from 'react';
+import Clouds from './Clouds';
 import Degrees from './Degrees';
+import Humidity from './Humidity';
+import MinMaxTemp from './MinMaxTemp';
+import SunriseSunset from './SunriseSunset';
+import Visibility from './Visibility';
 import WeatherCard from './WeatherCard';
+import WindStatus from './WindStatus';
+import Map from './Map';
 
 export const RightPanel = ({states}) => {
     return (
@@ -20,6 +27,25 @@ export const RightPanel = ({states}) => {
                             <WeatherCard time={s.time} picture={s.picture} temperature={s.temperature}/>
                         )
                     })}
+                </div>
+                <div className="highlights__title">
+                    Today's Highlights
+                </div>
+
+                <div className="highlights__main">
+                    <div className="highlights__block">
+                        <div className="hightlights__row">
+                           <WindStatus />
+                           <SunriseSunset />
+                           <Visibility />
+                        </div>
+                        <div className="hightlights__row">
+                            <MinMaxTemp />
+                            <Humidity />
+                            <Clouds />
+                        </div>
+                    </div>
+                    <Map />
                 </div>
             </div>
         </div>
