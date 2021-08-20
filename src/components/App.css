@@ -185,6 +185,9 @@ body {
   height: 153px;
   border-radius: 30px;
   background: #FFFFFF;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+
+  
 }
 
 .right-panel-card__time {
@@ -262,10 +265,9 @@ body {
   font-weight: 500;
 }
 
-.highlights__map {
+.leaflet-container {
   width: 400px;
   height: 400px;
 
-  background: #FFFFFF;
   border-radius: 30px;
 }

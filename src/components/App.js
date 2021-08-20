@@ -1,11 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import LeftPanel from './LeftPanel';
 import RightPanel from './RightPanel';
 import WeatherImg from '../utils/WeatherImg';
 import './App.css';
 
 function App() {
-  console.log(WeatherImg(1))
+  const dispatch = useDispatch();
+
+  // console.log(WeatherImg(1))
   let [weatherStates, setWeatherStates] = React.useState([
     {time: "3:00 AM", picture: WeatherImg(1), temperature: 18},
     {time: "6:00 AM", picture: WeatherImg(1), temperature: 21},
