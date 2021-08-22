@@ -6,7 +6,6 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 export const Map = () => {
     const geolocation = useSelector(({location}) => location.geolocation);
     const [location, setLocation] = useState([]);
-    // console.log(geolocation)
 
     useEffect(() => {
         if (geolocation?.loc) {

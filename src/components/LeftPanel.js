@@ -13,8 +13,9 @@ export const LeftPanel = () => {
     const date = new Date();
 
     const geolocation = useSelector(({location}) => location.geolocation);
+    const weather = useSelector(({weather}) => weather.weather);
+    // console.log(weather);
     
-console.log(date.toTimeString())
     return (
         <div className="left-panel">
             <div className="left-panel__container">
@@ -24,7 +25,7 @@ console.log(date.toTimeString())
                 </div>
                 <img className="left-panel__image" src={rain} alt="Weather"></img>
                 <div className="left-panel-text__temperature left-panel-text">
-                    15°C
+                        {Math.round(weather.current?.temp - 273.15)} &deg;C
                 </div>
                 <div className="left-panel-text__location left-panel-text">
                     {geolocation?.city}, {geolocation?.country}

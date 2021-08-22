@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchLocation } from '../redux/actions/location';
+
 import LeftPanel from './LeftPanel';
 import RightPanel from './RightPanel';
 import WeatherImg from '../utils/WeatherImg';
