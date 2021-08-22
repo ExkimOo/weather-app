@@ -1,6 +1,7 @@
 import React from 'react';
 
-export const SearchBar = () => {
+export const SearchBar = () => {    
+    
     return (
         <div>
             <input 

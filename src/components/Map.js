@@ -4,33 +4,34 @@ import { useSelector } from 'react-redux';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export const Map = () => {
-    let position = [56.012057, 92.835273];
     const geolocation = useSelector(({location}) => location.geolocation);
-    console.log(geolocation);
-    let [location, setLocation] = useState([]);
+    const [location, setLocation] = useState([]);
+    // console.log(geolocation)
 
     useEffect(() => {
-        if (geolocation.loc) {
-            setLocation([geolocation.loc.split(',')]);
+        if (geolocation?.loc) {
+            setLocation(geolocation.loc.split(','));
         }
     }, [geolocation]);
 
     return (
         <div>
+            {location.length > 1 && (
             <MapContainer 
-            center={position} 
+            center={location} 
             zoom={12} 
             scrollWheelZoom={true}>
                 <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={position}>
+                <Marker position={location}>
                 <Popup>
                     ???
                 </Popup>
                 </Marker>
             </MapContainer>
+            )}         
         </div>
     )
 }

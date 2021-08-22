@@ -9,12 +9,10 @@ const location = (state = initialState, action) => {
                 ...state,
                 geolocation: action.payload,
             }
-
         };
         default:
             return state;
     };
-    
 }
 
 export default location;

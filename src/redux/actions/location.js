@@ -5,12 +5,15 @@ export const setGeolocation = (geolocation) => ({
     payload: geolocation,
 });
 
-export const fetchLocation = (dispatch) => {
-    axios.get('https://api.ipify.org/?format=json').then(({data}) => {
-    console.log(data.ip);
-    axios.get(`https://ipinfo.io/${data.ip}?token=0edf6df4c17f9a`).then(({data}) => {
-        console.log(data.loc.split(','));
-        dispatch(setGeolocation(data.loc));
+export const fetchLocation = () => (dispatch) => {
+    axios.get('https://api.ipify.org/?format=json')
+    .then(({data}) => {
+    // console.log("IP");
+    // console.log(data.ip);
+    axios.get(`https://ipinfo.io/${data.ip}?token=0edf6df4c17f9a`)
+    .then(({data}) => {
+        // console.log(data);
+        dispatch(setGeolocation(data));
     }); 
 })};
 
