@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
 
+import view from '../assets/img/view.png';
+
 export const Visibility = () => {
     const weather = useSelector(({weather}) => weather.weather);
     const weatherLoad = useSelector(({weather}) => weather.isLoaded);
@@ -45,16 +47,17 @@ export const Visibility = () => {
     }, [weatherLoad]);
 
     return (
-        <div>
+        <div className="highlights__wrapper">
           { weatherLoad && (
             <div className="highlights__component">
               <div className="highlights__component-text">
                   Visibility
               </div>
-              <div>
+              <div className="highlights__component-visibility-wrapper">
+                <img src={view} className="highlights__component-visibility"></img>
                   {vis / 1000} km
               </div>
-              <div>
+              <div className="highlights__component-bottom-text">
                   {visStatus}
               </div>
           </div>

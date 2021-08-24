@@ -22,6 +22,10 @@ body {
   width: 100%;
   margin: 0 auto;
   max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .left-panel__header {
@@ -57,10 +61,9 @@ body {
 }
 
 .left-panel__image {
-  width: 255px;
-  height: 255px;
-  margin-top: 150px;
-  margin-left: 80px;
+  margin-top: 20px;
+  width: 400px;
+  height: 400px;
 }
 
 .left-panel-text {
@@ -71,8 +74,7 @@ body {
 }
 
 .left-panel-text__temperature {
-  margin-top: 55px;
-
+  margin-top: 20px;
   font-weight: 300;
   font-size: 96px;
 }
@@ -100,10 +102,6 @@ body {
 }
 
 .right-panel__container {
-  /* width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; */
-
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
@@ -211,8 +209,8 @@ body {
 }
 
 .right-panel-card__image {
-  width: 57px;
-  height: 57px;
+  width: 65px;
+  height: 65px;
 }
 
 .highlights__title {
@@ -241,12 +239,19 @@ body {
   display: flex;
 }
 
+.highlights__wrapper {
+  margin-left: 26px;
+}
+
+.highlights__wrapper:first-child {
+  margin-left: 0;
+}
+
 .highlights__component {
   display: flex;
   flex-direction: column;
   justify-content:space-around;
   text-align: center;
-  margin-left: 26px;
 
   width: 240px;
   height: 186px;
@@ -255,14 +260,10 @@ body {
   border-radius: 30px;
 }
 
-.highlights__component:first-child {
-  margin-left: 0;
-}
-
 .highlights__component-text {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .leaflet-container {
@@ -271,3 +272,83 @@ body {
 
   border-radius: 30px;
 }
+
+.temp_max {
+  margin-left: 4px;
+  color: #BCBCBC;
+}
+
+.highlights__sunrise-sunset {
+  width: 50px;
+  height: 50px;
+}
+
+.highlights__sunrise-sunset-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlights__component-bottom-text {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.highlights__min-max-wrapper {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.highlights__min-max {
+  width: 40px;
+  height: 40px;
+}
+
+.highlights__component-humidity-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlights__component-humidity {
+  width: 40px;
+  height: 40px;
+}
+
+.highlights__component-clouds-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlights__component-clouds {
+  width: 40px;
+  height: 40px;
+}
+
+.highlights__component-visibility-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlights__component-visibility {
+  width: 40px;
+  height: 40px;
+}
+
+.highlights__component-wind-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlights__component-wind {
+  width: 40px;
+  height: 40px;
+}
+

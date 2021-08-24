@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import humidity from '../assets/img/humidity.png';
+
 const humidityStatusArr = ['Dry', 'Pleasant', 'Comfortable', 'Sticky', 'Uncomfortable', 'Opresive', 'Miserable'];
 
 export const Humidity = () => {
@@ -38,16 +40,17 @@ export const Humidity = () => {
     }, [weatherLoad])
 
     return (
-        <div>
+        <div className="highlights__wrapper">
             {weatherLoad && (
                 <div className="highlights__component">
                     <div className="highlights__component-text">
                         Humidity
                     </div>
-                    <div>
+                    <div className="highlights__component-humidity-wrapper">
+                        <img src={humidity} className="highlights__component-humidity"></img>
                         {hum}%
                     </div>
-                    <div>
+                    <div className="highlights__component-bottom-text">
                         {humStatus}
                     </div>
                 </div>

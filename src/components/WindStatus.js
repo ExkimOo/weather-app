@@ -1,6 +1,8 @@
 import { useState, useEffect, React } from 'react';
 import { useSelector } from 'react-redux';
 
+import windImg from '../assets/img/wind.png';
+
 const BeaufortWindScale = ['Calm', 'Light Air', 'Light Breeze', 'Gentle Breeze', 'Moderate Breeze', 'Fresh Breeze', 'Strong Breeze',
 'Moderate Gale', 'Fresh Gale', 'Strong Gale', 'Whole Gale', 'Storm', 'Hurricane'];
 
@@ -58,16 +60,17 @@ export const WindStatus = () => {
     }, [weatherLoad]);
 
     return (
-        <div>
+        <div className="highlights__wrapper">
             { weatherLoad && (
                 <div className="highlights__component">
                     <div className="highlights__component-text">
                         Wind Status
                     </div>
-                    <div>
+                    <div className="highlights__component-wind-wrapper">
+                        <img src={windImg} className="highlights__component-wind"></img>
                         {wind} km/h
                     </div>
-                    <div>
+                    <div className="highlights__component-bottom-text">
                         {windStatus}
                     </div>
                 </div>

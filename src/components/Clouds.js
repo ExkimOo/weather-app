@@ -1,6 +1,8 @@
 import { useEffect, useState, React } from 'react';
 import { useSelector } from 'react-redux';
 
+import cloud from '../assets/img/cloud.png';
+
 export const Clouds = () => {
     const weather = useSelector(({weather}) => weather.weather);
     const weatherLoad = useSelector(({weather}) => weather.isLoaded);
@@ -16,17 +18,22 @@ export const Clouds = () => {
     }, [weatherLoad]);
 
     return (
-        <div>
+        <div className="highlights__wrapper">
             {weatherLoad && (
                 <div className="highlights__component">
                     <div className="highlights__component-text">
                         Clouds
                     </div>
-                    <div>
+                    <div className="highlights__component-clouds-wrapper">
+                        <img src={cloud} className="highlights__component-clouds"></img>
                         {clouds}%
                     </div>
-                    <div>
-                        {desc}
+                    <div className="highlights__component-bottom-text">
+                        {desc?.split(' ').map((obj) => {
+                            return(
+                                obj[0].toUpperCase() + obj.substring(1) + " "
+                            )
+                        })}
                     </div>
                 </div>  
             )}

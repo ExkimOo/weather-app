@@ -5,17 +5,32 @@ import SearchBar from './SearchBar';
 import Home from './Home';
 import './App.css';
 
-import rain from '../assets/media/rainy.png'
+import weatherImg from '../utils/weatherImg';
 
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thirsday', 'Friday', 'Saturday']
 
-export const LeftPanel = () => {
+const LeftPanel = () => {
     const date = new Date();
 
     const geolocation = useSelector(({location}) => location.geolocation);
     const weather = useSelector(({weather}) => weather.weather);
-    // console.log(weather);
+    const unit = useSelector(({unit}) => unit.unit);
+    const weatherLoad = useSelector(({weather}) => weather.isLoaded);
     
+    const [temp, setTemp] = useState(null);
+
+    useEffect(() => {
+        if (weatherLoad)
+        {
+            if (unit === "C")
+            {
+                setTemp(Math.round(weather.current.temp - 273.15));
+            } else {
+                setTemp(Math.round(1.8*(weather.current.temp - 273) + 32));
+            }
+        }
+    }, [weatherLoad, unit])
+
     return (
         <div className="left-panel">
             <div className="left-panel__container">
@@ -23,9 +38,9 @@ export const LeftPanel = () => {
                     <SearchBar />
                     <Home />
                 </div>
-                <img className="left-panel__image" src={rain} alt="Weather"></img>
+                <img className="left-panel__image" src={weatherImg(weather.current?.weather[0].id)} alt="Weather"></img>
                 <div className="left-panel-text__temperature left-panel-text">
-                        {Math.round(weather.current?.temp - 273.15)} &deg;C
+                        {temp}&deg;{unit}
                 </div>
                 <div className="left-panel-text__location left-panel-text">
                     {geolocation?.city}, {geolocation?.country}
