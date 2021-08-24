@@ -1,4 +1,4 @@
-import {useEffect, useState, React } from 'react';
+import { useEffect, useState, React } from 'react';
 import { useSelector } from 'react-redux';
 
 export const Clouds = () => {
@@ -11,11 +11,6 @@ export const Clouds = () => {
     useEffect(() => {
         if (weatherLoad) {
             setClouds(weather.current.clouds); 
-        }
-    }, [weatherLoad]);
-
-    useEffect(() => {
-        if (weatherLoad) {
             setDesc(weather.current.weather[0].description);
         }
     }, [weatherLoad]);
