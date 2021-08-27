@@ -48,7 +48,9 @@ export const Humidity = () => {
                     </div>
                     <div className="highlights__component-humidity-wrapper">
                         <img src={humidity} className="highlights__component-humidity"></img>
-                        {hum}%
+                        <div className="highlights__component-info_text">
+                            {hum}%
+                        </div>
                     </div>
                     <div className="highlights__component-bottom-text">
                         {humStatus}

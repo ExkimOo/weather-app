@@ -62,18 +62,18 @@ export const WindStatus = () => {
     return (
         <div className="highlights__wrapper">
             { weatherLoad && (
-                <div className="highlights__component">
-                    <div className="highlights__component-text">
-                        Wind Status
+                    <div className="highlights__component">
+                        <div className="highlights__component-text">
+                            Wind Status
+                        </div>
+                        <div className="highlights__component-wind-wrapper">
+                            <img src={windImg} className="highlights__component-wind_img"></img>
+                            <div className="highlights__component-info_text">{wind} km/h</div>
+                        </div>
+                        <div className="highlights__component-bottom-text">
+                            {windStatus}
+                        </div>
                     </div>
-                    <div className="highlights__component-wind-wrapper">
-                        <img src={windImg} className="highlights__component-wind"></img>
-                        {wind} km/h
-                    </div>
-                    <div className="highlights__component-bottom-text">
-                        {windStatus}
-                    </div>
-                </div>
             )}
         </div>
     )

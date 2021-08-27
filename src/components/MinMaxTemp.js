@@ -25,13 +25,15 @@ export const MinMaxTemp = () => {
                     <div className="highlights__component-text">
                         Min & Max Temperature
                     </div>
-                    <div>
-                        <div className="highlights__min-max-wrapper">
-                            <img src={thermMin} className="highlights__min-max"></img>
+                    <div className="highlights__min-max-wrapper">
+                        <img src={thermMin} className="highlights__min-max"></img>
+                        <div className="highlights__component-info_text">
                             {minTemp}&deg;
                         </div>
-                        <div className="highlights__min-max-wrapper">
-                            <img src={thermMax} className="highlights__min-max"></img>
+                    </div>
+                    <div className="highlights__min-max-wrapper">
+                        <img src={thermMax} className="highlights__min-max"></img>
+                        <div className="highlights__component-info_text">
                             {maxTemp}&deg;
                         </div>
                     </div>

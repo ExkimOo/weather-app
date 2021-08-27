@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import sun from '../assets/img/sunny.png';
+import sun from '../assets/img/sun.png';
 import moon from '../assets/img/moon.png';
 
 export const SunriseSunset = () => {
@@ -27,12 +27,16 @@ export const SunriseSunset = () => {
                         Sunrise & Sunset
                     </div>
                     <div className="highlights__sunrise-sunset-wrapper">
-                        <img className="highlights__sunrise-sunset" src={sun}></img>
-                        {sunrise}
+                        <img className="highlights__sunrise" src={sun}></img>
+                        <div className="highlights__component-info_text">
+                            {sunrise}
+                        </div>
                     </div>
                     <div className="highlights__sunrise-sunset-wrapper">
-                        <img className="highlights__sunrise-sunset" src={moon}></img>
-                        {sunset}
+                        <img className="highlights__sunset" src={moon}></img>
+                        <div className="highlights__component-info_text">
+                            {sunset}
+                        </div>
                     </div>
                 </div>
             )}

@@ -26,7 +26,9 @@ export const Clouds = () => {
                     </div>
                     <div className="highlights__component-clouds-wrapper">
                         <img src={cloud} className="highlights__component-clouds"></img>
-                        {clouds}%
+                        <div className="highlights__component-info_text">
+                            {clouds}%
+                        </div>
                     </div>
                     <div className="highlights__component-bottom-text">
                         {desc?.split(' ').map((obj) => {

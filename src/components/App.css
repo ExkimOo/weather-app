@@ -12,7 +12,7 @@ body {
 
 .left-panel {
   margin: 0 auto;
-  width: 500px;
+  max-width: 500px;
   background-color: white;
   height: 100vh;
   align-items: center;
@@ -40,11 +40,15 @@ body {
   width: 350px;
   height: 42px;
   padding-left: 50px;
-  /* background-image: url(../media/search.png); */
+  background: #DCDCDC;
+
+  background-image: url('../assets/img/magnifying-glass.svg');
+  background-repeat: no-repeat;
+  background-position: 18px 12px;
   background-size: 20px;
+  outline: none;
   font-size: 20px;
 
-  background: #DCDCDC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
@@ -98,7 +102,9 @@ body {
 .right-panel {
   background-color: #F1F1F1;
   width: calc(100% - 500px);
-  height: 100vh;
+  /* height: 100%; */
+  display: flex;
+
 }
 
 .right-panel__container {
@@ -241,18 +247,6 @@ body {
 
 .highlights__wrapper {
   margin-left: 26px;
-}
-
-.highlights__wrapper:first-child {
-  margin-left: 0;
-}
-
-.highlights__component {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-around;
-  text-align: center;
-
   width: 240px;
   height: 186px;
 
@@ -260,10 +254,25 @@ body {
   border-radius: 30px;
 }
 
+.highlights__wrapper:first-child {
+  margin-left: 0;
+}
+
+.highlights__component {
+  height: 166px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  text-align: center;
+}
+
 .highlights__component-text {
+  text-align: center;
+  margin-top: 18px;
+
   font-family: Roboto;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .leaflet-container {
@@ -278,26 +287,35 @@ body {
   color: #BCBCBC;
 }
 
-.highlights__sunrise-sunset {
-  width: 50px;
-  height: 50px;
+.highlights__sunrise {
+  width:  35px;
+  height: 35px;
+}
+
+.highlights__sunset {
+  width:  35px;
+  height: 33px; 
 }
 
 .highlights__sunrise-sunset-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-bottom: 10px;
 }
 
 .highlights__component-bottom-text {
   font-family: Roboto;
-  font-style: italic;
   font-weight: 400;
+  font-style:italic;
+  color: rgb(165, 165, 165)
 }
 
 .highlights__min-max-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: Roboto;
   font-weight: 400;
   font-size: 24px;
@@ -347,8 +365,16 @@ body {
   align-items: center;
 }
 
-.highlights__component-wind {
+.highlights__component-wind_img {
   width: 40px;
   height: 40px;
+}
+
+.highlights__component-info_text {
+  margin-left: 15px;
+
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 20px;
 }
 

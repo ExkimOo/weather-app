@@ -55,10 +55,16 @@ export const Visibility = () => {
               </div>
               <div className="highlights__component-visibility-wrapper">
                 <img src={view} className="highlights__component-visibility"></img>
+                <div className="highlights__component-info_text">
                   {vis / 1000} km
+                </div>
               </div>
               <div className="highlights__component-bottom-text">
-                  {visStatus}
+                  {visStatus?.split(' ').map((obj) => {
+                            return(
+                                obj[0].toUpperCase() + obj.substring(1) + " "
+                            )
+                        })}
               </div>
           </div>
           )}
